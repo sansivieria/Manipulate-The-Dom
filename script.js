@@ -8,34 +8,101 @@ let quotes = [
 ];
 
 document.addEventListener("DOMContentLoaded", function(event) {
+
+  function shortenTitle() {
+    const webtitle = document.querySelector('#main-title');
+      webtitle.innerHTML = '2fast 2furious';
+  }
+
+  function bgColor() {
+    const bod = document.querySelector('body');
+      bod.style.backgroundColor = 'pink';
+  }
+
+  function favorite() {
+    let favThings = document.getElementById('favorite-things');
+      favThings.removeChild(favThings.lastElementChild);
+  }
+
+  function sizeChange() {
+    const special = document.getElementById('quote-title');
+      special.style.fontSize = '2rem';
+
+    const special2 = document.getElementById('dom-adventures')
+      special2.style.fontSize = '2rem';
+  }
+
+  function noChicago() {
+    let pastRace = document.getElementById('past-races');
+      pastRace.removeChild(pastRace.childNodes[7]);
+  }
+
+  function addRace() {
+    const pastRace = document.querySelector('#past-races');
+    const li = document.createElement('li');
+      li.innerHTML = "Paris";
+      pastRace.appendChild(li);
+  }
+
+  function tumblr() {
+    const mainId = document.querySelector('.main');
+
+    const blogPost = document.createElement('div');
+      blogPost.classList.add('blog-post');
+      blogPost.classList.add('purple');
+      mainId.appendChild(blogPost);
+
+    const makePost = document.createElement('h1');
+      makePost.innerHTML = 'Paris';
+      blogPost.appendChild(makePost);
+
+    const innerPost = document.createElement('p');
+    innerPost.innerHTML = 'bought some balenciaga';
+    innerPost.appendChild(innerPost);
+  }
+
+
+
+
+
+
+
   // Random quote of the day generator
   const randomQuote = function() {
     document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
   };
   randomQuote();
-  
-  // Do all of your work inside the document.addEventListener  
+
+
+  // Do all of your work inside the document.addEventListener
 
   // Part 1
 
+shortenTitle();
 
   // Part 2
 
+bgColor();
 
   // Part 3
 
+favorite();
 
   // Part 4
 
+sizeChange();
 
   // Part 5
 
+noChicago();
 
   // Part 6
 
+addRace();
 
   // Part 7
 
+tumblr();
 
   // Part 8
 
