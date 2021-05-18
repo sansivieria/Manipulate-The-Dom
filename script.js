@@ -67,9 +67,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
+
+
   // Random quote of the day generator
   const randomQuote = function() {
     document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+    document.querySelector('#quote-of-the-day').addEventListener('click', handleClick);
+    function handleClick(evt) {
+      console.log(evt);
   };
   randomQuote();
 
@@ -103,13 +108,17 @@ addRace();
   // Part 7
 
 tumblr();
+//i couldn't get the innerHTML to work here, could use feed back
 
   // Part 8
+
+randomQuote();
+// i couldnt get the event handler to work here either line 74
 
 
   // Part 9
 
-
+// i need a quick runthrough on how to do event listeners im def confused with these
 
 
 });
